@@ -30,7 +30,7 @@ const appRoute : Routes = [
         component:AcknowledgementComponent
       },
       {
-        path:'auctionDonation',
+        path:'auctionDonationInformation',
         component:AuctionDonationComponent
       }
     ]

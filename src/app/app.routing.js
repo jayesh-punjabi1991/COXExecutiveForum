@@ -28,7 +28,7 @@ var appRoute = [
                 component: Acknowledgement_component_1.AcknowledgementComponent
             },
             {
-                path: 'auctionDonation',
+                path: 'auctionDonationInformation',
                 component: auctionDonation_component_1.AuctionDonationComponent
             }
         ]

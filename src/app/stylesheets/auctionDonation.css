@@ -1,0 +1,32 @@
+#donationHeader{
+  height:175px;
+  width:1170px;
+}
+#Text{
+  color:black;
+  font-family:AvenirRegular;
+  font-size:1.25rem;
+  padding:1.5% 0 0 1.5%;
+}
+.container{
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+.textDiv{
+  padding:1% 3% 1% 3%;
+}
+.container{
+  background-color: white !important;
+}
+#Signature{
+  height:70px;
+  width:150px;
+  padding-top:4%;
+  padding-bottom: 2%
+}
+#footer{
+  bottom:0;
+  position: fixed;
+  height:20px;
+  width:1170px;
+}
