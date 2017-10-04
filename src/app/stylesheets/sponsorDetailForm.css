@@ -6,13 +6,46 @@
 #sponsorDetailsHead{
   padding-top:1%;
   font-family: AvenirBoldCn;
-  font-size: 2.5rem;
+  font-size: 2.70rem;
   color:#004060;
   text-align: center;
 }
 #sponsorDetailsSubHead{
   color:#004059;
   font-family:AvenirRegular;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   text-align: center;
+}
+#sponsorDetailForm{
+  padding-top: 2%;
+  text-align: right;
+}
+.form-control{
+  display:inline-block !important;
+  width:75% !important;
+  background-color: #f5fbfb !important;
+  border:1px solid #004059 !important;
+}
+.control-label{
+  font-family: AvenirRegular !important;
+  font-size: 1.5rem !important;
+  padding-right:2% !important;
+  color:#004062 !important;
+}
+.formAlignment{
+  margin-left:-5%;
+}
+#confirmLink{
+  width:140px !important;
+}
+.form-control1{
+  width:100% !important;
+}
+.customLabel{
+  width:7% !important;
+  padding-left:0;
+  padding-right:0;
+}
+.customDiv{
+  width:38% !important;
 }

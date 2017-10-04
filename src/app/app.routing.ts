@@ -5,6 +5,7 @@ import { AppComponent }  from './app.component';
 import { HomeComponent }  from './components/home.component';
 import { AboutComponent }  from './components/about.component';
 import { SponsorDetailComponent }  from './components/sponsorDetailForm.component';
+import { AcknowledgementComponent }  from './components/Acknowledgement.component';
 
 const appRoute : Routes = [
   {
@@ -23,6 +24,10 @@ const appRoute : Routes = [
         path:'sponsorDetailForm',
         component:SponsorDetailComponent
       },
+      {
+        path:'acknowledgement',
+        component:AcknowledgementComponent
+      }
     ]
   },
   { path: '**', redirectTo: 'forum/home' }

@@ -4,6 +4,7 @@ var app_component_1 = require("./app.component");
 var home_component_1 = require("./components/home.component");
 var about_component_1 = require("./components/about.component");
 var sponsorDetailForm_component_1 = require("./components/sponsorDetailForm.component");
+var Acknowledgement_component_1 = require("./components/Acknowledgement.component");
 var appRoute = [
     {
         path: 'forum',
@@ -21,6 +22,10 @@ var appRoute = [
                 path: 'sponsorDetailForm',
                 component: sponsorDetailForm_component_1.SponsorDetailComponent
             },
+            {
+                path: 'acknowledgement',
+                component: Acknowledgement_component_1.AcknowledgementComponent
+            }
         ]
     },
     { path: '**', redirectTo: 'forum/home' }

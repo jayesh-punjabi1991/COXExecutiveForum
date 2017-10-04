@@ -9,6 +9,21 @@ var core_1 = require("@angular/core");
 var SponsorDetailComponent = (function () {
     function SponsorDetailComponent() {
     }
+    SponsorDetailComponent.prototype.Confirm = function () {
+        this.SponsorDetails = {
+            name: this.sponsorsName,
+            email: this.emailAdd,
+            title: this.tit,
+            company: this.companyName,
+            phoneNumber: this.phoneNo,
+            coxContact: this.coxCont,
+            address: {
+                companyAddress: this.companyAdd,
+                cityStateZip: this.cSZ,
+            }
+        };
+        console.log(this.SponsorDetails);
+    };
     return SponsorDetailComponent;
 }());
 SponsorDetailComponent = __decorate([
