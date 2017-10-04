@@ -20,6 +20,7 @@ var auction_component_1 = require("./components/auction.component");
 var header_component_1 = require("./components/header.component");
 var footer_component_1 = require("./components/footer.component");
 var auctionDonation_component_1 = require("./components/auctionDonation.component");
+var auctionDonationForm_component_1 = require("./components/auctionDonationForm.component");
 var app_routing_1 = require("./app.routing");
 var AppModule = (function () {
     function AppModule() {
@@ -29,7 +30,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, app_routing_1.Routing],
-        declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, header_component_1.HeaderComponent, about_component_1.AboutComponent, footer_component_1.FooterComponent, sponsorDetailForm_component_1.SponsorDetailComponent, Acknowledgement_component_1.AcknowledgementComponent, ics_component_1.IcsComponent, print_component_1.PrintComponent, auction_component_1.AuctionComponent, auctionDonation_component_1.AuctionDonationComponent],
+        declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, header_component_1.HeaderComponent, about_component_1.AboutComponent, footer_component_1.FooterComponent, sponsorDetailForm_component_1.SponsorDetailComponent, Acknowledgement_component_1.AcknowledgementComponent, ics_component_1.IcsComponent, print_component_1.PrintComponent, auction_component_1.AuctionComponent, auctionDonation_component_1.AuctionDonationComponent, auctionDonationForm_component_1.AuctionDonationFormComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

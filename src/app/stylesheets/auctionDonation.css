@@ -5,28 +5,32 @@
 #Text{
   color:black;
   font-family:AvenirRegular;
-  font-size:1.25rem;
-  padding:1.5% 0 0 1.5%;
+  font-size:1.5rem;
+  padding:1% 0 0 1.5%;
 }
 .container{
   padding-left: 0px !important;
   padding-right: 0px !important;
 }
 .textDiv{
-  padding:1% 3% 1% 3%;
+  padding:0.5% 3% 0.5% 3%;
+  font-family:AvenirRegular;
 }
 .container{
   background-color: white !important;
 }
 #Signature{
-  height:70px;
+  height:60px;
   width:150px;
-  padding-top:4%;
-  padding-bottom: 2%
+  padding-top:2%;
+  padding-bottom: 1%;
 }
 #footer{
   bottom:0;
-  position: fixed;
   height:20px;
   width:1170px;
+}
+
+#donationPlea{
+  font-family: AvenirBoldCn;
 }

@@ -13,13 +13,14 @@ import { PrintComponent }  from './components/print.component';
 import { AuctionComponent }  from './components/auction.component';
 import { HeaderComponent }  from './components/header.component';
 import { FooterComponent }  from './components/footer.component';
-import{ AuctionDonationComponent } from './components/auctionDonation.component'
+import{ AuctionDonationComponent } from './components/auctionDonation.component';
+import{ AuctionDonationFormComponent } from './components/auctionDonationForm.component';
 
 import { Routing }  from './app.routing';
 
 @NgModule({
   imports:      [ BrowserModule,FormsModule,HttpModule,Routing ],
-  declarations: [ AppComponent,HomeComponent,HeaderComponent,AboutComponent,FooterComponent,SponsorDetailComponent,AcknowledgementComponent,IcsComponent,PrintComponent,AuctionComponent,AuctionDonationComponent ],
+  declarations: [ AppComponent,HomeComponent,HeaderComponent,AboutComponent,FooterComponent,SponsorDetailComponent,AcknowledgementComponent,IcsComponent,PrintComponent,AuctionComponent,AuctionDonationComponent,AuctionDonationFormComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
