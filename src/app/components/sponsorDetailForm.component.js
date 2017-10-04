@@ -6,16 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var SponsorDetailComponent = (function () {
+    function SponsorDetailComponent() {
     }
-    return AppComponent;
+    return SponsorDetailComponent;
 }());
-AppComponent = __decorate([
+SponsorDetailComponent = __decorate([
     core_1.Component({
-        selector: 'cox-forum',
-        template: "\n      <router-outlet></router-outlet>\n  ",
+        moduleId: module.id,
+        selector: 'sponsorDetails',
+        templateUrl: "sponsorDetailForm.component.html",
+        styleUrls: ['../stylesheets/sponsorDetailForm.css'],
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], SponsorDetailComponent);
+exports.SponsorDetailComponent = SponsorDetailComponent;
+//# sourceMappingURL=sponsorDetailForm.component.js.map

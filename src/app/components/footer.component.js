@@ -6,16 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var AppComponent = (function () {
-    function AppComponent() {
+var FooterComponent = (function () {
+    function FooterComponent() {
     }
-    return AppComponent;
+    return FooterComponent;
 }());
-AppComponent = __decorate([
+FooterComponent = __decorate([
     core_1.Component({
-        selector: 'cox-forum',
-        template: "\n      <router-outlet></router-outlet>\n  ",
+        moduleId: module.id,
+        selector: 'bottomfooter',
+        templateUrl: "footer.component.html",
+        styleUrls: ['../stylesheets/bottomfooter.css'],
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], FooterComponent);
+exports.FooterComponent = FooterComponent;
+//# sourceMappingURL=footer.component.js.map

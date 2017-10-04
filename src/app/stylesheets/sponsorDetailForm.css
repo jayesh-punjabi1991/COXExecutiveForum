@@ -1,0 +1,18 @@
+#sponsorDetails{
+  height:72vh;
+  width:100%;
+  background-color: #f5fbfb;
+}
+#sponsorDetailsHead{
+  padding-top:1%;
+  font-family: AvenirBoldCn;
+  font-size: 2.5rem;
+  color:#004060;
+  text-align: center;
+}
+#sponsorDetailsSubHead{
+  color:#004059;
+  font-family:AvenirRegular;
+  font-size: 1.5rem;
+  text-align: center;
+}

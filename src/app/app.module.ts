@@ -1,11 +1,21 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { AppComponent }  from './app.component';
+import { HomeComponent }  from './components/home.component';
+import { AboutComponent }  from './components/about.component';
+import { SponsorDetailComponent }  from './components/sponsorDetailForm.component';
+import { AcknowledgementComponent }  from './components/Acknowledgement.component';
+import { HeaderComponent }  from './components/header.component';
+import { FooterComponent }  from './components/footer.component';
+
+import { Routing }  from './app.routing';
 
 @NgModule({
-  imports:      [ BrowserModule ],
-  declarations: [ AppComponent ],
+  imports:      [ BrowserModule,FormsModule,HttpModule,Routing ],
+  declarations: [ AppComponent,HomeComponent,HeaderComponent,AboutComponent,FooterComponent,SponsorDetailComponent,AcknowledgementComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
