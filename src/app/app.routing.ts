@@ -6,6 +6,7 @@ import { HomeComponent }  from './components/home.component';
 import { AboutComponent }  from './components/about.component';
 import { SponsorDetailComponent }  from './components/sponsorDetailForm.component';
 import { AcknowledgementComponent }  from './components/Acknowledgement.component';
+import { AuctionDonationComponent }  from './components/auctionDonation.component';
 
 const appRoute : Routes = [
   {
@@ -27,6 +28,10 @@ const appRoute : Routes = [
       {
         path:'acknowledgement',
         component:AcknowledgementComponent
+      },
+      {
+        path:'auctionDonation',
+        component:AuctionDonationComponent
       }
     ]
   },

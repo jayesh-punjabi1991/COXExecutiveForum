@@ -5,6 +5,7 @@ var home_component_1 = require("./components/home.component");
 var about_component_1 = require("./components/about.component");
 var sponsorDetailForm_component_1 = require("./components/sponsorDetailForm.component");
 var Acknowledgement_component_1 = require("./components/Acknowledgement.component");
+var auctionDonation_component_1 = require("./components/auctionDonation.component");
 var appRoute = [
     {
         path: 'forum',
@@ -25,6 +26,10 @@ var appRoute = [
             {
                 path: 'acknowledgement',
                 component: Acknowledgement_component_1.AcknowledgementComponent
+            },
+            {
+                path: 'auctionDonation',
+                component: auctionDonation_component_1.AuctionDonationComponent
             }
         ]
     },

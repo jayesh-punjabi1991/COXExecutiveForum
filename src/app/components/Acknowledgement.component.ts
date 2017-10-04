@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { HeaderComponent }  from './header.component';
 import { FooterComponent }  from './footer.component';
+import { IcsComponent }  from './ics.component';
+import { PrintComponent }  from './print.component';
+import { AuctionComponent }  from './auction.component';
 
 @Component({
   moduleId:module.id,
