@@ -1,6 +1,6 @@
 #donationHeader{
-  height:175px;
-  width:1170px;
+  height:150px;
+  width:900px;
 }
 #textDonationForm{
   color:black;
@@ -11,18 +11,19 @@
 .container{
   padding-left: 0px !important;
   padding-right: 0px !important;
+  background-color: white !important;
+  margin-left: 233px !important;
+  margin-right: 233px !important;
+  width: 900px !important;
 }
 .textDivForDonationForm{
   padding:1% 5% 1% 5%;
   font-family:AvenirRegular;
 }
-.container{
-  background-color: white !important;
-}
 #footer{
   bottom:0;
   height:20px;
-  width:1170px;
+  width:900px;
 }
 .firstCol{
   width:40%;

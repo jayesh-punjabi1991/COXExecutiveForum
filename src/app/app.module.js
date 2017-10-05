@@ -14,13 +14,13 @@ var home_component_1 = require("./components/home.component");
 var about_component_1 = require("./components/about.component");
 var sponsorDetailForm_component_1 = require("./components/sponsorDetailForm.component");
 var Acknowledgement_component_1 = require("./components/Acknowledgement.component");
-var ics_component_1 = require("./components/ics.component");
 var print_component_1 = require("./components/print.component");
 var auction_component_1 = require("./components/auction.component");
 var header_component_1 = require("./components/header.component");
 var footer_component_1 = require("./components/footer.component");
 var auctionDonation_component_1 = require("./components/auctionDonation.component");
 var auctionDonationForm_component_1 = require("./components/auctionDonationForm.component");
+var invoice_component_1 = require("./components/invoice.component");
 var app_routing_1 = require("./app.routing");
 var AppModule = (function () {
     function AppModule() {
@@ -30,7 +30,7 @@ var AppModule = (function () {
 AppModule = __decorate([
     core_1.NgModule({
         imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, http_1.HttpModule, app_routing_1.Routing],
-        declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, header_component_1.HeaderComponent, about_component_1.AboutComponent, footer_component_1.FooterComponent, sponsorDetailForm_component_1.SponsorDetailComponent, Acknowledgement_component_1.AcknowledgementComponent, ics_component_1.IcsComponent, print_component_1.PrintComponent, auction_component_1.AuctionComponent, auctionDonation_component_1.AuctionDonationComponent, auctionDonationForm_component_1.AuctionDonationFormComponent],
+        declarations: [app_component_1.AppComponent, home_component_1.HomeComponent, header_component_1.HeaderComponent, about_component_1.AboutComponent, footer_component_1.FooterComponent, sponsorDetailForm_component_1.SponsorDetailComponent, Acknowledgement_component_1.AcknowledgementComponent, print_component_1.PrintComponent, auction_component_1.AuctionComponent, auctionDonation_component_1.AuctionDonationComponent, auctionDonationForm_component_1.AuctionDonationFormComponent, invoice_component_1.InvoiceComponent],
         bootstrap: [app_component_1.AppComponent]
     })
 ], AppModule);

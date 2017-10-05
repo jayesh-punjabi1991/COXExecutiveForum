@@ -7,6 +7,7 @@ import { AboutComponent }  from './components/about.component';
 import { SponsorDetailComponent }  from './components/sponsorDetailForm.component';
 import { AcknowledgementComponent }  from './components/Acknowledgement.component';
 import { AuctionDonationComponent }  from './components/auctionDonation.component';
+import { InvoiceComponent }  from './components/invoice.component';
 
 const appRoute : Routes = [
   {
@@ -32,6 +33,11 @@ const appRoute : Routes = [
       {
         path:'auctionDonationInformation',
         component:AuctionDonationComponent
+      }
+      ,
+      {
+        path:'invoice',
+        component:InvoiceComponent
       }
     ]
   },

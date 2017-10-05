@@ -6,18 +6,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var IcsComponent = (function () {
-    function IcsComponent() {
+var Subject_1 = require("rxjs/Subject");
+var PassService = (function () {
+    function PassService() {
+        this.SponsorData = new Subject_1.Subject();
     }
-    return IcsComponent;
+    PassService.prototype.storeSponsorData = function (SponsorDetails) {
+        this.SponsorData.next(SponsorDetails);
+    };
+    return PassService;
 }());
-IcsComponent = __decorate([
-    core_1.Component({
-        moduleId: module.id,
-        selector: 'ics',
-        templateUrl: "ics.component.html",
-        styleUrls: ['../stylesheets/ics.css'],
-    })
-], IcsComponent);
-exports.IcsComponent = IcsComponent;
-//# sourceMappingURL=ics.component.js.map
+PassService = __decorate([
+    core_1.Injectable()
+], PassService);
+exports.PassService = PassService;
+//# sourceMappingURL=passData.service.js.map
