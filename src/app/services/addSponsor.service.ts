@@ -8,12 +8,11 @@ export class AddService{
   constructor(private http : Http){
     console.log("Add Sponsor Service Initiated...");
   }
-  addSponsor(details: any):Observable<Response>{
-    //let body=JSON.stringify(details);
+  addSponsor(details: any):Observable<any>{
+    let body = JSON.stringify(details);
     let headers = new Headers({'Content-Type': 'application/json'});
     let options=new RequestOptions({headers:headers});
 
-    return this.http.post("https://coxexecutiveforum.run.aws-usw02-pr.ice.predix.io/coxevent/user", details, headers)
-    .map((res: Response) => res.json().data);
+    return this.http.post("https://coxexecutiveforum.run.aws-usw02-pr.ice.predix.io/coxevent/user", body, options).map(res => res.json());
   }
 }

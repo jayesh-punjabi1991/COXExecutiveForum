@@ -21,9 +21,11 @@ export class SponsorDetailComponent implements OnInit {
   coxCont:string;
   companyAdd:string;
   cSZ:string;
-  //returnSponsorDetails:returnSponsorDetails;
+  returnSponsorDetails:string[];
 
-  constructor(public PassService: PassService){ }
+  constructor(public PassService: PassService,private AddService:AddService){
+    this.returnSponsorDetails=null;
+  }
 
   ngOnInit(){ }
   Confirm(){
@@ -40,10 +42,13 @@ export class SponsorDetailComponent implements OnInit {
       }
     }
     console.log(this.SponsorDetails);
-    this.PassService.storeSponsorData(this.SponsorDetails);
-    // this.AddService.addSponsor(this.SponsorDetails).subscribe(detailsBack => {
-    //   console.log(detailsBack);
-    // })
+    //this.PassService.storeSponsorData(this.SponsorDetails);
+    this.AddService.addSponsor(this.SponsorDetails).subscribe(returned=>
+      {
+        this.returnSponsorDetails=returned;
+        console.log(returned);
+        console.log(this.returnSponsorDetails);
+      });
   }
  }
 
@@ -60,21 +65,3 @@ interface address{
   companyAddress:string;
   cityStateZip:string;
 }
-// interface returnSponsorDetails{
-//   registrationNumber:string;
-//   registrationDate:string;
-//   user:user;
-// }
-// interface user{
-//   name:string;
-//   email:string;
-//   title:string;
-//   company:string;
-//   phoneNumber:number;
-//   coxContact:string;
-//   address:returnaddress;
-//  }
-// interface returnaddress{
-//   companyAddress:string;
-//   cityStateZip:string;
-// }

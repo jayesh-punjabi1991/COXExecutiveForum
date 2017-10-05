@@ -17,7 +17,7 @@ interface address{
 @Injectable()
 export class PassService{
   public SponsorData= new Subject<SponsorDetails>();
-    storeSponsorData(SponsorDetails:SponsorDetails){  
+    storeSponsorData(SponsorDetails:SponsorDetails){
     this.SponsorData.next(SponsorDetails);
   }
 }

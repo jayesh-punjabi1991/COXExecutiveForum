@@ -12,12 +12,14 @@ var core_1 = require("@angular/core");
 var addSponsor_service_1 = require("../services/addSponsor.service");
 var passData_service_1 = require("../services/passData.service");
 var SponsorDetailComponent = (function () {
-    //returnSponsorDetails:returnSponsorDetails;
-    function SponsorDetailComponent(PassService) {
+    function SponsorDetailComponent(PassService, AddService) {
         this.PassService = PassService;
+        this.AddService = AddService;
+        this.returnSponsorDetails = null;
     }
     SponsorDetailComponent.prototype.ngOnInit = function () { };
     SponsorDetailComponent.prototype.Confirm = function () {
+        var _this = this;
         this.SponsorDetails = {
             name: this.sponsorsName,
             email: this.emailAdd,
@@ -31,10 +33,12 @@ var SponsorDetailComponent = (function () {
             }
         };
         console.log(this.SponsorDetails);
-        this.PassService.storeSponsorData(this.SponsorDetails);
-        // this.AddService.addSponsor(this.SponsorDetails).subscribe(detailsBack => {
-        //   console.log(detailsBack);
-        // })
+        //this.PassService.storeSponsorData(this.SponsorDetails);
+        this.AddService.addSponsor(this.SponsorDetails).subscribe(function (returned) {
+            _this.returnSponsorDetails = returned;
+            console.log(returned);
+            console.log(_this.returnSponsorDetails);
+        });
     };
     return SponsorDetailComponent;
 }());
@@ -46,25 +50,7 @@ SponsorDetailComponent = __decorate([
         styleUrls: ['../stylesheets/sponsorDetailForm.css'],
         providers: [addSponsor_service_1.AddService, passData_service_1.PassService]
     }),
-    __metadata("design:paramtypes", [passData_service_1.PassService])
+    __metadata("design:paramtypes", [passData_service_1.PassService, addSponsor_service_1.AddService])
 ], SponsorDetailComponent);
 exports.SponsorDetailComponent = SponsorDetailComponent;
-// interface returnSponsorDetails{
-//   registrationNumber:string;
-//   registrationDate:string;
-//   user:user;
-// }
-// interface user{
-//   name:string;
-//   email:string;
-//   title:string;
-//   company:string;
-//   phoneNumber:number;
-//   coxContact:string;
-//   address:returnaddress;
-//  }
-// interface returnaddress{
-//   companyAddress:string;
-//   cityStateZip:string;
-// }
 //# sourceMappingURL=sponsorDetailForm.component.js.map

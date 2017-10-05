@@ -17,11 +17,10 @@ var AddService = (function () {
         console.log("Add Sponsor Service Initiated...");
     }
     AddService.prototype.addSponsor = function (details) {
-        //let body=JSON.stringify(details);
+        var body = JSON.stringify(details);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.post("https://coxexecutiveforum.run.aws-usw02-pr.ice.predix.io/coxevent/user", details, headers)
-            .map(function (res) { return res.json().data; });
+        return this.http.post("https://coxexecutiveforum.run.aws-usw02-pr.ice.predix.io/coxevent/user", body, options).map(function (res) { return res.json(); });
     };
     return AddService;
 }());
