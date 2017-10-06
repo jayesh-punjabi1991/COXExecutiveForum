@@ -6,13 +6,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require("@angular/core");
-var Subject_1 = require("rxjs/Subject");
 var PassService = (function () {
     function PassService() {
-        this.SponsorData = new Subject_1.Subject();
     }
-    PassService.prototype.storeSponsorData = function (SponsorDetails) {
-        this.SponsorData.next(SponsorDetails);
+    PassService.prototype.setSponsorDetail = function (res) {
+        this.sponsorDetails = res;
+        sessionStorage.setItem('Details', JSON.stringify(this.sponsorDetails));
+    };
+    PassService.prototype.getSponsorDetail = function () {
+        this.sponsorDetails = sessionStorage.getItem('Details');
+        return this.sponsorDetails;
     };
     return PassService;
 }());

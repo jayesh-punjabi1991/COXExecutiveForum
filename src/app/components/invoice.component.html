@@ -16,10 +16,9 @@
     <div class="col-md-6" id="billToHeading">
       Bill To
       <div id="billTo">
-        XYZ Network<br>
-        1234 Main Street<br>
-        New York, NY 02564<br>
-        Jane Johnson<br>
+        {{companyAddress}}<br>
+        {{cityStateZip}}<br>
+        {{name}}
       </div>
     </div>
     <div class="col-md-6" id="invoiceDetailsDiv">
@@ -27,11 +26,11 @@
         <tbody>
           <tr>
             <td id="invoiceDetailsHead">Invoice</td>
-            <td id="invoiceDetailsContent">#12345</td>
+            <td id="invoiceDetailsContent">#{{invoiceNumber}}</td>
           </tr>
           <tr>
             <td id="invoiceDetailsHead">Invoice Date</td>
-            <td id="invoiceDetailsContent">10/01/2017</td>
+            <td id="invoiceDetailsContent">{{this.invoiceDate}}</td>
           </tr>
         </tbody>
       </table>
@@ -102,4 +101,6 @@
           Atlanta, GA 30328
         </div>
   </div>
+</div>
+<div>
 </div>

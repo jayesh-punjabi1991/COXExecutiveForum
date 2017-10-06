@@ -41,13 +41,10 @@ export class SponsorDetailComponent implements OnInit {
         cityStateZip:this.cSZ,
       }
     }
-    console.log(this.SponsorDetails);
-    //this.PassService.storeSponsorData(this.SponsorDetails);
     this.AddService.addSponsor(this.SponsorDetails).subscribe(returned=>
       {
         this.returnSponsorDetails=returned;
-        console.log(returned);
-        console.log(this.returnSponsorDetails);
+        this.PassService.setSponsorDetail(this.returnSponsorDetails);
       });
   }
  }

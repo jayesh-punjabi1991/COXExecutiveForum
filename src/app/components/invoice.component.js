@@ -13,10 +13,14 @@ var passData_service_1 = require("../services/passData.service");
 var InvoiceComponent = (function () {
     function InvoiceComponent(PassService) {
         this.PassService = PassService;
+        this.SponsorDetails = JSON.parse(this.PassService.getSponsorDetail());
+        this.invoiceDateTemp = new Date(this.SponsorDetails.registrationDate);
+        this.invoiceDate = this.invoiceDateTemp.getMonth() + 1 + '/' + this.invoiceDateTemp.getDate() + '/' + this.invoiceDateTemp.getFullYear();
+        this.invoiceNumber = this.SponsorDetails.registrationNumber;
+        this.companyAddress = this.SponsorDetails.user.address.companyAddress;
+        this.cityStateZip = this.SponsorDetails.user.address.cityStateZip;
+        this.name = this.SponsorDetails.user.name;
     }
-    InvoiceComponent.prototype.ngOnInit = function () {
-        this.PassService.SponsorData.subscribe(function (SponsorDetails) { return console.log("Here"); });
-    };
     InvoiceComponent.prototype.Print = function () {
         window.print();
     };

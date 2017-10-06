@@ -32,12 +32,9 @@ var SponsorDetailComponent = (function () {
                 cityStateZip: this.cSZ,
             }
         };
-        console.log(this.SponsorDetails);
-        //this.PassService.storeSponsorData(this.SponsorDetails);
         this.AddService.addSponsor(this.SponsorDetails).subscribe(function (returned) {
             _this.returnSponsorDetails = returned;
-            console.log(returned);
-            console.log(_this.returnSponsorDetails);
+            _this.PassService.setSponsorDetail(_this.returnSponsorDetails);
         });
     };
     return SponsorDetailComponent;
