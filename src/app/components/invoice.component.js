@@ -20,6 +20,7 @@ var InvoiceComponent = (function () {
         this.companyAddress = this.SponsorDetails.user.address.companyAddress;
         this.cityStateZip = this.SponsorDetails.user.address.cityStateZip;
         this.name = this.SponsorDetails.user.name;
+        this.companyName = this.SponsorDetails.user.company;
     }
     InvoiceComponent.prototype.Print = function () {
         window.print();

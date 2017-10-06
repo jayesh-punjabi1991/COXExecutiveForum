@@ -15,6 +15,7 @@ export class InvoiceComponent {
   invoiceNumber:string;
   companyAddress:string;
   cityStateZip:string;
+  companyName:string;
   name:string;
   constructor(public PassService:PassService){
     this.SponsorDetails=JSON.parse(this.PassService.getSponsorDetail());
@@ -24,6 +25,7 @@ export class InvoiceComponent {
     this.companyAddress=this.SponsorDetails.user.address.companyAddress;
     this.cityStateZip=this.SponsorDetails.user.address.cityStateZip;
     this.name=this.SponsorDetails.user.name;
+    this.companyName=this.SponsorDetails.user.company;
   }
   Print(){
     window.print();
