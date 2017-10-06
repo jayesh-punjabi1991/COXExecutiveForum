@@ -33,8 +33,7 @@ const appRoute : Routes = [
       {
         path:'auctionDonationInformation',
         component:AuctionDonationComponent
-      }
-      ,
+      },
       {
         path:'invoice',
         component:InvoiceComponent
