@@ -19,24 +19,28 @@ export class InvoiceComponent {
   name:string;
   constructor(public PassService:PassService){
     this.SponsorDetails=JSON.parse(this.PassService.getSponsorDetail());
-    this.invoiceDateTemp=new Date(this.SponsorDetails.registrationDate);
+    console.log(this.SponsorDetails);
+    this.invoiceDateTemp=new Date(this.SponsorDetails.details.registrationDate);
     this.invoiceDate=this.invoiceDateTemp.getMonth() + 1 + '/' + this.invoiceDateTemp.getDate() + '/' +  this.invoiceDateTemp.getFullYear();
-    this.invoiceNumber=this.SponsorDetails.registrationNumber;
-    this.companyAddress=this.SponsorDetails.user.address.companyAddress;
-    this.cityStateZip=this.SponsorDetails.user.address.cityStateZip;
-    this.name=this.SponsorDetails.user.name;
-    this.companyName=this.SponsorDetails.user.company;
+    this.invoiceNumber=this.SponsorDetails.details.registrationNumber;
+    this.companyAddress=this.SponsorDetails.details.userDetails.address.companyAddress;
+    this.cityStateZip=this.SponsorDetails.details.userDetails.address.cityStateZip;
+    this.name=this.SponsorDetails.details.userDetails.name;
+    this.companyName=this.SponsorDetails.details.userDetails.company;
   }
   Print(){
     window.print();
   }
 }
 interface SponsorDetails{
+  details:details;
+}
+interface details{
   registrationDate:number;
   registrationNumber:string;
-  user:user;
+  userDetails:userDetails;
 }
-interface user{
+interface userDetails{
   name:string;
   email:string;
   title:string;
