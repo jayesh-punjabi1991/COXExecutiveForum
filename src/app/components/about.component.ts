@@ -5,7 +5,7 @@ import { FooterComponent }  from './footer.component';
 @Component({
   moduleId:module.id,
   selector: 'about',
-  templateUrl: `about.component.html`,
+  templateUrl: `./about.component.html`,
   styleUrls:['../stylesheets/about.css'],
 })
 export class AboutComponent  { }

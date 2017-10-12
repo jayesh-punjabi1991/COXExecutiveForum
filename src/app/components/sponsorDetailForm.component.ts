@@ -8,7 +8,7 @@ declare var $: any;
 @Component({
   moduleId: module.id,
   selector: 'sponsorDetails',
-  templateUrl: `sponsorDetailForm.component.html`,
+  templateUrl: `./sponsorDetailForm.component.html`,
   styleUrls: ['../stylesheets/sponsorDetailForm.css'],
   providers: [AddService, PassService]
 })
@@ -102,6 +102,7 @@ export class SponsorDetailComponent implements OnInit {
       console.log(this.SponsorDetails);
       this.AddService.addSponsor(this.SponsorDetails).subscribe(returned => {
         this.returnSponsorDetails = returned;
+		debugger
         if(Object.keys(returned).length==2){
           if(returned.errorCode=="23502"){
             document.getElementById('snackbar').innerHTML = "Email Address has already been registered";
@@ -125,7 +126,7 @@ export class SponsorDetailComponent implements OnInit {
         else{
         this.PassService.setSponsorDetail(this.returnSponsorDetails);
         setTimeout(function(){
-          window.location.href = '../forum/acknowledgement';
+          window.location.href = '../#/forum/acknowledgement';
         },5000);
       }
       });

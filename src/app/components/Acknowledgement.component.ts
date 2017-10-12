@@ -7,7 +7,7 @@ import { AuctionComponent }  from './auction.component';
 @Component({
   moduleId:module.id,
   selector: 'acknowledgement',
-  templateUrl: `acknowledgement.component.html`,
+  templateUrl: `./acknowledgement.component.html`,
   styleUrls:['../stylesheets/acknowledgement.css'],
 })
 export class AcknowledgementComponent  { }

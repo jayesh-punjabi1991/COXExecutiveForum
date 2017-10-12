@@ -4,7 +4,7 @@ import {PassService} from '../services/passData.service';
 @Component({
   moduleId:module.id,
   selector: 'invoice',
-  templateUrl: `invoice.component.html`,
+  templateUrl: `./invoice.component.html`,
   styleUrls:['../stylesheets/invoice.css','../stylesheets/printInvoice.css'],
   providers:[PassService]
 })
