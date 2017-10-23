@@ -6,3 +6,24 @@
 #printerText{
   padding-top:5%;
 }
+@media screen and (max-width:1050px) and (min-width:500px){
+  #printerLogo{
+    height:75px !important;
+    width:75px !important;
+    filter:brightness(90%);
+  }
+  #printerText{
+    padding-top:2%;
+    padding-bottom: 2%;
+  }
+}
+@media screen and (max-width:500px){
+  #printerLogo{
+    height:50px !important;
+    width:50px !important;
+    filter:brightness(90%);
+  }
+  #printerText{
+    padding-bottom: 6%;
+  }
+}

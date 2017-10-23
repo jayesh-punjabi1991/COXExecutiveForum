@@ -40,7 +40,7 @@ const appRoute : Routes = [
       }
     ]
   },
-  { path: '**', redirectTo: 'forum/home' }
+  { path: '**', redirectTo: 'forum/about' }
 ]
 
 export const Routing : ModuleWithProviders = RouterModule.forRoot(appRoute,{useHash: true});

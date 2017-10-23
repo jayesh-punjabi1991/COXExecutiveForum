@@ -1,6 +1,6 @@
 ---
 applications:
-  - name: coxexecutiveforum2018
+  - name: coxexecutiveforum-2018
     buildpack: staticfile_buildpack
     memory: 128MB
  

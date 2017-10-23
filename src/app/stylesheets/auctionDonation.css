@@ -27,11 +27,25 @@
   padding-bottom: 1%;
 }
 #footer{
-  bottom:0;  
+  bottom:0;
   height:20px;
   width:900px;
 }
 
 #donationPlea{
   font-family: AvenirBoldCn;
+}
+.pdfViewer{
+ display : block;
+}
+.pdfViewerMobile{
+display : none;
+}
+@media only screen and (max-width: 414px) {
+	.pdfViewer{
+ 		display : none;
+	}
+.pdfViewerMobile{
+display : block;
+}
 }

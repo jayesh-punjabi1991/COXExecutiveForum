@@ -1,61 +1,212 @@
-#aboutForum{
-  height:28vh;
+#aboutForum {
   background-color: #f5fbfb;
 }
-#aboutForumHead{
+
+#aboutForumHead {
   padding-top: 1%;
   text-align: center;
   color: black;
-  font-family:AvenirMedium;
-  font-size: 2rem;
+  font-family: AvenirMedium;
+  font-size: 3rem;
 }
-#aboutForumSubHead{
+
+#aboutForumSubHead {
   text-align: center;
   color: black;
-  font-family:AvenirMedium;
+  font-family: AvenirMedium;
   font-size: 1.5rem;
 }
-#aboutForumText{
-  padding:1% 4% 0 4%;
+
+#aboutForumText {
+  padding: 1% 4% 0 4%;
   text-align: left;
   color: black;
-  font-family:AvenirRegular;
-  font-size: 1.25rem;
+  font-family: AvenirRegular;
+  font-size: 1.5rem;
 }
-#aboutSponsorship{
-  padding:1% 4% 0 4%;
-  height: 44vh;
-  background-color: #004059;
+
+#aboutSponsorship {
+  padding: 1% 4% 0 4%;
+  margin-top: -1%;
+  background-color: #423393;
+  padding-bottom: 2% !important;
 }
-#aboutSponsorshipHead{
+
+#aboutSponsorshipHead {
   font-family: AvenirBoldCn;
   font-size: 2rem;
-  color:#92d9d6;
+  color: #92d9d6;
 }
-#aboutSponsorshipSubHead{
-  font-family: AvenirMediumCn;
+
+#aboutSponsorshipSubHead {
+  font-family: AvenirMedium;
   font-size: 1.5rem;
-  color:#92d9d6;
+  color: white;
 }
-#aboutSponsorshipContent{
-  padding:1% 0 0 0;
+
+#aboutSponsorshipContent {
+  padding: 1% 0 0 0;
   font-family: AvenirRegular;
-  font-size: 1.25rem;
-  color:white;
-}
-#aboutSponsorshipButtonText{
-  font-family: AvenirMediumCn;
   font-size: 1.5rem;
-  color:#92d9d6;
+  color: white;
 }
-button, #aboutSponsorshipButton{
-  margin:1% 0 0 0 !important;  
+
+#aboutSponsorshipButtonText {
+  font-family: AvenirRegular;
+  font-size: 1.65rem;
+  color: white;
+}
+
+button, #aboutSponsorshipButton {
+  margin: 1% 0 0 0 !important;
   font-family: AvenirBoldCn !important;
-  font-size:3rem !important;
-  height:45px !important;
-  width:120px !important;
-  background-color:#d1cf54 !important;
-  color:#004059 !important;
-  cursor:pointer !important;
+  font-size: 3rem !important;
+  height: 45px !important;
+  width: 120px !important;
+  background-color: #d1cf54 !important;
+  color: #004059 !important;
+  cursor: pointer !important;
   border: none !important;
+}
+
+.whiteBackground {
+  background-color: white !important;
+}
+
+.joinUsButton {
+  background-color: yellow !important;
+  color: black !important;
+}
+
+.sponsorshipLabel {
+  margin-left: 4%;
+  font-size: 3.25rem;
+  font-family: AvenirMedium;
+  color: #423393;
+}
+
+@media only screen and (max-width: 320px) {
+  .sponsorshipLabel {
+    margin-left: 4%;
+    font-size: 4.25rem;
+    color: #423393;
+  }
+}
+/*iPad Landscape*/
+@media only screen and (max-width: 1050px) and (min-width:800px) {
+  #aboutSponsorship {
+    margin-top: -0.7%;
+  }
+  #aboutForumHead {
+    font-size: 2rem;
+  }
+  #aboutForumSubHead {
+    font-size: 1.5rem;
+  }
+  #aboutForumText {
+    font-size: 1.5rem;
+  }
+  #aboutSponsorshipHead {
+    font-size: 2rem;
+  }
+  #aboutSponsorshipSubHead {
+    font-size: 1.5rem;
+  }
+  #aboutSponsorshipContent {
+    font-size: 1.5rem;
+  }
+  #aboutSponsorshipButtonText {
+    font-size: 1.5rem;
+  }
+  .sponsorshipLabel {
+    font-size: 2rem;
+  }
+  button, #aboutSponsorshipButton {
+    font-size: 1.75rem !important;
+    height: 30px !important;
+    width: 100px !important;
+  }
+  #aboutForum {
+    padding-bottom: 10%;
+  }
+  #aboutSponsorship {
+    padding-bottom: 10% !important;
+  }
+}
+/*iPad Portrait*/
+@media only screen and (max-width: 800px) {
+  #aboutForumHead {
+    font-size: 2rem;
+  }
+  #aboutForumSubHead {
+    font-size: 1.5rem;
+  }
+  #aboutForumText {
+    font-size: 1.5rem;
+  }
+  #aboutSponsorshipHead {
+    font-size: 1.5rem;
+  }
+  #aboutSponsorshipSubHead {
+    font-size: 1.5rem;
+  }
+  #aboutSponsorshipContent {
+    font-size: 1.5rem;
+  }
+  #aboutSponsorshipButtonText {
+    font-size: 1.5rem;
+  }
+  .sponsorshipLabel {
+    ;
+    font-size: 2rem;
+  }
+  button, #aboutSponsorshipButton {
+    font-size: 2rem !important;
+    height: 60px !important;
+    width: 100px !important;
+  }
+  #aboutForum {
+    padding-bottom: 10%;
+  }
+  #aboutSponsorship {
+    padding-bottom: 10% !important;
+  }
+}
+/*iPhone Portrait*/
+@media only screen and (max-width: 500px) {
+  #aboutForumHead {
+    font-size: 1.5rem;
+  }
+  #aboutForumSubHead {
+    font-size: 1rem;
+  }
+  #aboutForumText {
+    font-size: 1rem;
+  }
+  #aboutSponsorshipHead {
+    font-size: 1.5rem;
+  }
+  #aboutSponsorshipSubHead {
+    font-size: 1rem;
+  }
+  #aboutSponsorshipContent {
+    font-size: 1rem;
+  }
+  #aboutSponsorshipButtonText {
+    font-size: 1rem;
+  }
+  .sponsorshipLabel {
+    font-size: 1.5rem;
+  }
+  button, #aboutSponsorshipButton {
+    font-size: 1.5rem !important;
+    height: 30px !important;
+    width: 100% !important;
+  }
+  #aboutForum {
+    padding-bottom: 10%;
+  }
+  #aboutSponsorship {
+    padding-bottom: 10% !important;
+  }
 }

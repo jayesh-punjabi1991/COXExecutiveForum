@@ -1,42 +1,147 @@
-#acknowledgementDiv{
-  height:72vh;
-  width:100%;
-  background-color: #f5fbfb;
+#acknowledgementDiv {
+  height: 63vh;
+  width: 100%;
+  background-color: white;
 }
-#acknowledgementHead{
-  padding-top:1%;
+
+#acknowledgementHead {
+  padding-top: 1%;
   font-family: AvenirBoldCn;
   font-size: 2.70rem;
-  color:#004060;
+  color: black;
   text-align: center;
 }
-#acknowledgementSubHead{
-  color:#004059;
-  font-family:AvenirRegular;
+
+#acknowledgementSubHead {
+  color: black;
+  font-family: AvenirRegular;
   font-size: 1.75rem;
   text-align: center;
 }
-#acknowledgementBody{
-  padding-top:4%;
+
+#acknowledgementBody {
+  padding-top: 4%;
   text-align: right;
-  font-family:AvenirRegular;
-  font-size:1.5rem;
-  color:#317193;
+  font-family: AvenirRegular;
+  font-size: 1.5rem;
+  color: black;
 }
-#ics{
+
+#ics {
   text-align: center;
 }
-#print{
+
+#print {
   text-align: center;
 }
-#auction{
+
+#auction {
   text-align: center;
 }
-#calenderLogo{
-  height:100px;
-  width:100px;
-  filter:brightness(90%);
+
+#calenderLogo {
+  height: 100px;
+  width: 100px;
+  filter: brightness(90%);
 }
-#icsText{
-  padding-top:5%;
+
+#icsText {
+  padding-top: 5%;
+}
+/*iPad Landscape*/
+@media screen and (max-width:1020px) and (min-width:800px) {
+  #acknowledgementHead {
+    font-size: 1.75rem;
+    padding-top: 5%;
+  }
+  #acknowledgementSubHead {
+    font-size: 1.25rem;
+  }
+  #calenderLogo {
+    height: 75px;
+    width: 75px;
+    filter: brightness(90%);
+  }
+  #acknowledgementBody {
+    font-size: 1.25rem;
+  }
+  #acknowledgementDiv {
+    height: 83vh;
+  }
+  #icsText {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}
+/*iPad Portrait*/
+@media screen and (max-width:800px) and (min-width:500px) {
+  #acknowledgementHead {
+    font-size: 1.5rem;
+  }
+  #acknowledgementDiv{
+    height:72vh !important;
+    max-height:100vh !important;
+  }
+  #acknowledgementSubHead {
+    font-size: 1.25rem;
+  }
+  #calenderLogo {
+    height: 60px;
+    width: 60px;
+    filter: brightness(90%);
+  }
+  #acknowledgementBody {
+    font-size: 1.25rem;
+  }
+  #icsText {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}
+/*iPhone Landscape*/
+@media screen and (max-width:800px) and (max-height:500px) {
+  #acknowledgementHead {
+    font-size: 1.5rem;
+  }
+  #acknowledgementDiv{
+    height:105vh !important;
+  }
+  #acknowledgementSubHead {
+    font-size: 1.25rem;
+  }
+  #calenderLogo {
+    height: 60px;
+    width: 60px;
+    filter: brightness(90%);
+  }
+  #acknowledgementBody {
+    font-size: 1.25rem;
+  }
+  #icsText {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+}
+/*iPhone Portrait*/
+@media screen and (max-width:500px){
+  #acknowledgementHead {
+    font-size: 1.25rem;
+  }
+  #acknowledgementSubHead {
+    font-size: 1rem;
+  }
+  #calenderLogo {
+    height: 50px;
+    width: 50px;
+    filter: brightness(90%);
+  }
+  #acknowledgementDiv{
+    height:85vh;
+  }
+  #acknowledgementBody {
+    font-size: 1rem;
+  }
+  #icsText {
+    padding-bottom: 5%;
+  }
 }

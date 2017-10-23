@@ -1,7 +1,7 @@
 #footerDiv{
-  height:2vh;
   position: fixed;
-  background-color: #4fc2bf;
+  /*background-color: #4fc2bf;*/
   bottom: 0;
   width:100%;
+  background-color:black;
 }

@@ -1,17 +1,17 @@
 #sponsorDetails{
   height:95vh;
   width:100%;
-  background-color: #f5fbfb;
+  background-color: white;
 }
 #sponsorDetailsHead{
   padding-top:1%;
   font-family: AvenirBoldCn;
   font-size: 2.70rem;
-  color:#004060;
+  color:black;
   text-align: center;
 }
 #sponsorDetailsSubHead{
-  color:#004059;
+  color:black;
   font-family:AvenirRegular;
   font-size: 1.75rem;
   text-align: center;
@@ -23,20 +23,20 @@
 .form-control{
   display:inline-block !important;
   width:55% !important;
-  background-color: #f5fbfb !important;
+  background-color: white !important;
   border:1px solid #004059 !important;
 }
 .control-label{
   font-family: AvenirRegular !important;
   font-size: 1.5rem !important;
   padding-right:2% !important;
-  color:#004062 !important;
+  color:black !important;
 }
 .formAlignment{
   margin-left:-5%;
 }
 #confirmLink{
-  width:140px !important;
+  width:140px;
 }
 .form-control1{
   width:100% !important;
@@ -94,4 +94,71 @@
 @keyframes fadeout {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
+}
+/*iPad Landscape*/
+@media screen and (max-width:1020px) and (min-width:800px) {
+  .form-control{
+    width:50% !important;
+  }
+  .control-label{
+    padding-right: 0 !important;
+  }
+}
+/*iPad Portrait*/
+@media screen and (max-width:800px) and (min-width:500px) {
+  .control-label{
+    width:40%;
+  }
+  .formAlignment{
+      margin-left: 0 !important;
+      margin-top: 1%;
+  }
+  #sponsorDetailForm{
+    text-align: left;
+  }
+  #sponsorDetails{
+    height:135vh;
+  }
+  #buttonDiv{
+    text-align: right;
+    margin-right: 4%;
+  }
+}
+/*iPhone Portrait*/
+@media screen and (max-width:500px){
+  .control-label{
+    width:40%;
+    font-size:1.25rem !important;
+  }
+  .formAlignment{
+      margin-left: 0 !important;
+      margin-top: 1%;
+  }
+  #sponsorDetailForm{
+    text-align: left;
+  }
+  #buttonDiv{
+    text-align: right;
+    margin-right: 4%;
+  }
+  #sponsorDetails{
+    height:115vh;
+  }
+  #sponsorDetailsHead{
+    font-size:1.5rem;
+  }
+  #sponsorDetailsSubHead{
+    font-size: 1.25rem;
+  }
+  button{
+    font-size:1.5rem !important;
+    height:30px !important;
+    width:100% !important;
+  }
+}
+/*iPhone Landscape*/
+@media screen and (max-height:500px){
+  #sponsorDetails{
+    height:220vh !important;
+  }
 }

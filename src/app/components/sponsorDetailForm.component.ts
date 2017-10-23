@@ -23,7 +23,7 @@ export class SponsorDetailComponent implements OnInit {
   coxCont: string;
   companyAdd: string;
   cSZ: string;
-  noOfAttend: string;
+  noOfAttend: number;
   invoiceCont: string;
   invoiceContEmail: string;
   invoiceContPhone: string;
@@ -32,8 +32,10 @@ export class SponsorDetailComponent implements OnInit {
   signageContPhone: string;
   returnSponsorDetails: string[];
   alltxt: number;
+  Spinner:boolean;
 
   constructor(public PassService: PassService, private AddService: AddService) {
+    this.Spinner=false;
     sessionStorage.clear();
     this.returnSponsorDetails = null;
     this.Message = "Please Fill all the Mandatory Fields";
@@ -77,6 +79,14 @@ export class SponsorDetailComponent implements OnInit {
       })
     }
     if(count1==3){
+      if(this.noOfAttend < 0 || this.noOfAttend > 3){
+        document.getElementById('snackbar').innerHTML = "Number of Attendees should be between 0 and 3";
+        var x = document.getElementById("snackbar")
+        x.className = "show";
+        setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+      }
+      else{
+      this.Spinner=true;
       this.SponsorDetails = {
         userDetails:
         {
@@ -99,24 +109,26 @@ export class SponsorDetailComponent implements OnInit {
           }
         }
       }
-      console.log(this.SponsorDetails);
+      // console.log(this.SponsorDetails);
       this.AddService.addSponsor(this.SponsorDetails).subscribe(returned => {
         this.returnSponsorDetails = returned;
-		debugger
         if(Object.keys(returned).length==2){
           if(returned.errorCode=="23502"){
+            this.Spinner=false;
             document.getElementById('snackbar').innerHTML = "Email Address has already been registered";
             var x = document.getElementById("snackbar")
             x.className = "show";
             setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
           }
           else if(returned.errorCode=="508"){
+            this.Spinner=false;
             document.getElementById('snackbar').innerHTML = "There was an issue in saving details of user. Please try again";
             var x = document.getElementById("snackbar")
             x.className = "show";
             setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
           }
           else if(returned.errorCode=="500"){
+            this.Spinner=false;
             document.getElementById('snackbar').innerHTML = "Error has occurred. Please contact admin";
             var x = document.getElementById("snackbar")
             x.className = "show";
@@ -131,6 +143,7 @@ export class SponsorDetailComponent implements OnInit {
       }
       });
     }
+    }
   }
 }
 
@@ -144,7 +157,7 @@ interface userDetails {
   company: string;
   phoneNumber: string;
   coxContact: string;
-  noOfAttendees: string;
+  noOfAttendees: number;
   invoiceContact: string;
   invoiceContactEmail: string;
   invoiceContactPhone: string;
