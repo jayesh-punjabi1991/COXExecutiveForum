@@ -19,7 +19,7 @@ export class SponsorDetailComponent implements OnInit {
   sponsorsName: string;
   emailAdd: string;
   tit: string;
-  phoneNo: string;
+  phoneNo: number;
   coxCont: string;
   companyAdd: string;
   cSZ: string;
@@ -32,10 +32,10 @@ export class SponsorDetailComponent implements OnInit {
   signageContPhone: string;
   returnSponsorDetails: string[];
   alltxt: number;
-  Spinner:boolean;
+  Spinner: boolean;
 
   constructor(public PassService: PassService, private AddService: AddService) {
-    this.Spinner=false;
+    this.Spinner = false;
     sessionStorage.clear();
     this.returnSponsorDetails = null;
     this.Message = "Please Fill all the Mandatory Fields";
@@ -44,31 +44,32 @@ export class SponsorDetailComponent implements OnInit {
   ngOnInit() { }
   Confirm() {
     var count = 0;
-    var count1=0;
+    var count1 = 0;
     $('form input[type=text]').each(function(i: any) {
-      if ($(this).val() != '') {
+      if ($(this).val().trim() != '') {
         count += 1;
       }
     });
     $('form input[type=number]').each(function(i: any) {
-      if ($(this).val() != '') {
+      if ($(this).val().trim() != '') {
         count += 1;
       }
     });
     $('form input[type=email]').each(function(i: any) {
-      if ($(this).val() != '') {
+      if ($(this).val().trim() != '') {
         count += 1;
       }
     });
     if (count != 15) {
-      var x = document.getElementById("snackbar")
+      document.getElementById('snackbar').innerHTML = "Please Fill the Mandatory Fields";
+      var x = document.getElementById("snackbar");
       x.className = "show";
       setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
     }
     else {
       $('form input[type=email]').each(function(i: any) {
         if ($(this).val().includes("@") && $(this).val().includes(".")) {
-          count1+=1;
+          count1 += 1;
         }
         else {
           document.getElementById('snackbar').innerHTML = "Please Fill the Email Address Correctly";
@@ -77,16 +78,31 @@ export class SponsorDetailComponent implements OnInit {
           setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
         }
       })
-    }
-    if(count1==3){
-      if(this.noOfAttend < 0 || this.noOfAttend > 3){
-        document.getElementById('snackbar').innerHTML = "Number of Attendees should be between 0 and 3";
-        var x = document.getElementById("snackbar")
-        x.className = "show";
-        setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+      if (count1 == 3) {
+        if (this.noOfAttend < 0 || this.noOfAttend > 3) {
+          document.getElementById('snackbar').innerHTML = "Number of Attendees should be between 0 and 3";
+          var x = document.getElementById("snackbar")
+          x.className = "show";
+          setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+        }
+        else {
+          count1 += 1;
+        }
       }
-      else{
-      this.Spinner=true;
+      if (count1 == 4) {
+        if (typeof this.phoneNo != 'number' || typeof this.invoiceContPhone != 'number' || typeof this.noOfAttend != 'number' || typeof this.signageContPhone != 'number') {
+          document.getElementById('snackbar').innerHTML = "Please enter numbers in the Number Fields";
+          var x = document.getElementById("snackbar")
+          x.className = "show";
+          setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
+        }
+        else {
+          count1 += 1;
+        }
+      }
+    }
+    if (count1 == 5) {
+      this.Spinner = true;
       this.SponsorDetails = {
         userDetails:
         {
@@ -109,40 +125,38 @@ export class SponsorDetailComponent implements OnInit {
           }
         }
       }
-      // console.log(this.SponsorDetails);
       this.AddService.addSponsor(this.SponsorDetails).subscribe(returned => {
         this.returnSponsorDetails = returned;
-        if(Object.keys(returned).length==2){
-          if(returned.errorCode=="23502"){
-            this.Spinner=false;
+        if (Object.keys(returned).length == 2) {
+          if (returned.errorCode == "23502") {
+            this.Spinner = false;
             document.getElementById('snackbar').innerHTML = "Email Address has already been registered";
             var x = document.getElementById("snackbar")
             x.className = "show";
             setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
           }
-          else if(returned.errorCode=="508"){
-            this.Spinner=false;
+          else if (returned.errorCode == "508") {
+            this.Spinner = false;
             document.getElementById('snackbar').innerHTML = "There was an issue in saving details of user. Please try again";
             var x = document.getElementById("snackbar")
             x.className = "show";
             setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
           }
-          else if(returned.errorCode=="500"){
-            this.Spinner=false;
+          else if (returned.errorCode == "500") {
+            this.Spinner = false;
             document.getElementById('snackbar').innerHTML = "Error has occurred. Please contact admin";
             var x = document.getElementById("snackbar")
             x.className = "show";
             setTimeout(function() { x.className = x.className.replace("show", ""); }, 3000);
           }
         }
-        else{
-        this.PassService.setSponsorDetail(this.returnSponsorDetails);
-        setTimeout(function(){
-          window.location.href = '../#/forum/acknowledgement';
-        },5000);
-      }
+        else {
+          this.PassService.setSponsorDetail(this.returnSponsorDetails);
+          setTimeout(function() {
+            window.location.href = '../#/forum/acknowledgement';
+          }, 5000);
+        }
       });
-    }
     }
   }
 }
@@ -155,7 +169,7 @@ interface userDetails {
   email: string;
   title: string;
   company: string;
-  phoneNumber: string;
+  phoneNumber: number;
   coxContact: string;
   noOfAttendees: number;
   invoiceContact: string;

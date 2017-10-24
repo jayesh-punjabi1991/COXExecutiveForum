@@ -58,17 +58,17 @@
     <div class="row" style="padding-top:1%">
       <div class="col-md-6">
         <label class="control-label">No. Of Attendees (0-3)</label>
-        <input type="number" class="form-control" name="noOfAttend" [(ngModel)]="noOfAttend" value="noOfAttend">
+          <input type="number" onkeyup="this.value=this.value.replace(/[^\d]/,'')" class="form-control" name="noOfAttend" [(ngModel)]="noOfAttend" value="noOfAttend">
       </div>
       <div class="col-md-6 formAlignment">
         <label class="control-label">Phone</label>
-        <input type="number" class="form-control" name="phoneNo" [(ngModel)]="phoneNo" value="phoneNo">
+        <input type="number" class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="phoneNo" [(ngModel)]="phoneNo" value="phoneNo">
       </div>
     </div>
     <div class="row" style="padding-top:1%">
       <div class="col-md-6">
         <label class="control-label">Invoice Contact</label>
-        <input type="text" class="form-control" name="invoiceCont" [(ngModel)]="invoiceCont" value="invoiceCont">
+        <input type="text" class="form-control"  name="invoiceCont" [(ngModel)]="invoiceCont" value="invoiceCont">
       </div>
       <div class="col-md-6 formAlignment">
         <label class="control-label">Logo/Signage Contact</label>
@@ -88,11 +88,11 @@
     <div class="row" style="padding-top:1%">
       <div class="col-md-6">
         <label class="control-label">Invoice Contact Phone</label>
-        <input type="number" class="form-control" name="invoiceContPhone" [(ngModel)]="invoiceContPhone" value="invoiceContPhone">
+        <input type="number" class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="invoiceContPhone" [(ngModel)]="invoiceContPhone" value="invoiceContPhone">
       </div>
       <div class="col-md-6 formAlignment">
         <label class="control-label">Logo/Signage Contact Phone</label>
-        <input type="number" class="form-control" name="signageContPhone" [(ngModel)]="signageContPhone" value="signageContPhone">
+        <input type="number" class="form-control" onkeyup="this.value=this.value.replace(/[^\d]/,'')" name="signageContPhone" [(ngModel)]="signageContPhone" value="signageContPhone">
       </div>
     </div>
     <div class="row" style="padding-top:1%">
