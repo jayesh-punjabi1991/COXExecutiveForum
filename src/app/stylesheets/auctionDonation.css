@@ -36,16 +36,21 @@
   font-family: AvenirBoldCn;
 }
 .pdfViewer{
- display : block;
+  display : block;
 }
 .pdfViewerMobile{
-display : none;
+  display : none;
 }
 @media only screen and (max-width: 414px) {
 	.pdfViewer{
  		display : none;
 	}
-.pdfViewerMobile{
-display : block;
+  .pdfViewerMobile{
+    display : block;
+  }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #donationPlea,#textDiv,#Text{
+    font-family: Arial !important;
+  }
 }

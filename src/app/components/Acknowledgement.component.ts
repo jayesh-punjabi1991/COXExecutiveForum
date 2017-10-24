@@ -10,4 +10,6 @@ import { AuctionComponent }  from './auction.component';
   templateUrl: `./acknowledgement.component.html`,
   styleUrls:['../stylesheets/acknowledgement.css'],
 })
-export class AcknowledgementComponent  { }
+export class AcknowledgementComponent  {
+  
+ }

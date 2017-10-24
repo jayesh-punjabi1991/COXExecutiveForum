@@ -7,22 +7,27 @@ html,body{
 @font-face {
     font-family: AvenirBold;
     src: url(../fonts/AvenirNextLTPro-Bold.otf);
+    /*src: url(../fonts/AvenirNextLTPro-Bold.eot);*/
 }
 @font-face {
     font-family: AvenirBoldCn;
     src: url(../fonts/AvenirNextLTPro-BoldCn.otf);
+    /*src: url(../fonts/AvenirNextLTPro-BoldCn.eot);*/
 }
 @font-face {
     font-family: AvenirMedium;
     src: url(../fonts/AvenirNextLTPro-Medium.otf);
+    /*src: url(../fonts/AvenirNextLTPro-Medium.eot);*/
 }
 @font-face {
     font-family: AvenirMediumCn;
     src: url(../fonts/AvenirNextLTPro-MediumCn.otf);
+    /*src: url(../fonts/AvenirNextLTPro-MediumCn.eot);*/
 }
 @font-face {
     font-family: AvenirRegular;
     src: url(../fonts/AvenirNextLTPro-Regular.otf);
+    /*src: url(../fonts/AvenirNextLTPro-Regular.eot);*/
 }
 .row{
     margin-left: 0 !important;
@@ -98,5 +103,10 @@ button{
   } 35% {
     -webkit-transform: scale3D(0, 0, 1);
             transform: scale3D(0, 0, 1);
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  button{
+    font-family: Arial !important;
   }
 }

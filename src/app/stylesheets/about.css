@@ -210,3 +210,12 @@ button, #aboutSponsorshipButton {
     padding-bottom: 10% !important;
   }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+ button{
+   font-size:2rem !important;
+   font-family: Arial !important;
+ }
+ #aboutForumHead,.sponsorshipLabel,#aboutSponsorshipButton,#aboutSponsorshipButtonText,#aboutSponsorshipContent,#aboutSponsorshipSubHead,#aboutSponsorshipHead,#aboutForumText,#aboutForumSubHead{
+   font-family:Arial !important;
+ }
+}

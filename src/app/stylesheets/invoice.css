@@ -79,3 +79,22 @@
 #printButton{
   float: right;
 }
+@media screen and (max-width:800px){
+  /*#printButton{
+    float: right;
+    height:30px;
+    width:30px;
+    font-size:1.5rem;
+  }*/
+  #sponsorshipTable{
+    width:95%;
+  }
+  .custom{
+    font-size: small !important;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #bodyInvoiceDetailsTable,#bodyPaymentOptionsTable,#billToHeading,thead,#paymentOptionsHead,#remitHead,#coxAddress, #billTo, #invoiceDetailsContent,#remitBody,#heading,#invoiceDetailsHead,#customTD{
+    font-family:Arial !important;
+  }
+}

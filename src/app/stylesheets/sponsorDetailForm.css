@@ -142,7 +142,7 @@
     margin-right: 4%;
   }
   #sponsorDetails{
-    height:115vh;
+    height:135vh;
   }
   #sponsorDetailsHead{
     font-size:1.5rem;
@@ -155,10 +155,21 @@
     height:30px !important;
     width:100% !important;
   }
+  #snackbar{
+    left: 35%;
+  }
 }
 /*iPhone Landscape*/
 @media screen and (max-height:500px){
   #sponsorDetails{
     height:220vh !important;
   }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+ button{
+   font-size:2rem !important;
+ }
+ .control-label,#sponsorDetailsSubHead,#sponsorDetailsHead{
+   font-family: Arial !important;
+ }
 }

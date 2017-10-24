@@ -83,4 +83,9 @@
   #printButton{
     display: none;
   }
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    #bodyInvoiceDetailsTable,#bodyPaymentOptionsTable,#billToHeading,thead,#paymentOptionsHead,#remitHead,#coxAddress, #billTo, #invoiceDetailsContent,#remitBody,#heading,#invoiceDetailsHead,#customTD{
+      font-family:Arial !important;
+    }
+  }
 }

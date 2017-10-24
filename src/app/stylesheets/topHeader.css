@@ -67,3 +67,8 @@
   width:400px;
 }
 }
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #firstLine,#secondLine1,#secondLine2,#thirdLine{
+    font-family:Arial !important;
+  }
+}
