@@ -235,3 +235,12 @@ button, #aboutSponsorshipButton {
    font-family:Arial !important;
  }
 }
+#pdfLink{
+  color:white !important;
+  text-decoration: underline !important;
+  cursor:pointer;
+}
+#pdfLink:hover{
+  color:black !important;
+  cursor:pointer;
+}

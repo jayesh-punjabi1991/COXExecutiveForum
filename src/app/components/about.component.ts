@@ -8,4 +8,8 @@ import { FooterComponent }  from './footer.component';
   templateUrl: `./about.component.html`,
   styleUrls:['../stylesheets/about.css'],
 })
-export class AboutComponent  { }
+export class AboutComponent  {
+  displayFile(){
+    window.open('app/images/2018DraftDonationLetter.pdf');
+  }
+}
