@@ -6,4 +6,8 @@ import { Component } from '@angular/core';
   templateUrl: `./auctionDonation.component.html`,
   styleUrls:['../stylesheets/auctionDonation.css'],
 })
-export class AuctionDonationComponent  { }
+export class AuctionDonationComponent  {
+  displayFile(){
+    window.open('app/images/2018DraftDonationLetter.pdf');
+  }
+}

@@ -1,7 +1,12 @@
 #aboutForum {
   background-color: #f5fbfb;
 }
-
+#ButtonsDiv{
+  margin-bottom: 2%;
+}
+#AuctionDiv{
+  margin-top: -4%;
+}
 #aboutForumHead {
   padding-top: 1%;
   text-align: center;
@@ -93,7 +98,9 @@ button, #aboutSponsorshipButton {
 }
 /*iPad Landscape*/
 @media only screen and (max-width: 1050px) and (min-width:800px) {
-
+  #ButtonsDiv{
+    margin-bottom: 0;
+  }
   #aboutForumHead {
     font-size: 2rem;
   }
@@ -131,7 +138,13 @@ button, #aboutSponsorshipButton {
   }
 }
 /*iPad Portrait*/
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 800px) and (min-width:500px) {
+  #ButtonsDiv{
+    margin-bottom: 0;
+  }
+  #AuctionDiv{
+    margin-top: -12%;
+  }
   #aboutForumHead {
     font-size: 2rem;
   }
@@ -171,6 +184,12 @@ button, #aboutSponsorshipButton {
 }
 /*iPhone Portrait*/
 @media only screen and (max-width: 500px) {
+  #AuctionDiv{
+    margin-top:2%;
+  }
+  #ButtonsDiv{
+    margin-bottom: 0;
+  }
   #aboutForumHead {
     font-size: 1.5rem;
   }
